@@ -13,30 +13,17 @@
     <img src="/images/heroes-banner.jpg" alt="" width="100%">
   </div>
 
-
 <%- include('./partials/head') %> 
-<div class="cover"><img src="/images/VOU.jpg" alt=""></div>
+
 
 
 <section class="section">
   <h1>HEROES DATABASE</h1>  
-<div class="d-flex f-row f-wrap j-arround">
-    <% heroes.forEach(function(heroes) { %>
-      <article class="hero w-30">
-        <a href="/heroes/<%=heroes.id %>">
-        <div class="hero-img">
-          <img src="/images/starlight.png" alt="" width="100%">
-        </div>
-        <div class="hero-name">
-          <h1><%= heroes.alias %></h1>
-        </a>
-      </article>
 
-    <% })  %> 
-  </div>
-
-
-</section>
+  <%= resultado.alias %>
+  <%= resultado.name  %>
+  <%= resultado.review  %> 
+ </section>
 
 
 

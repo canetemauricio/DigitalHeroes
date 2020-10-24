@@ -104,19 +104,8 @@
 
 </section>
 
-<div class="back-top" id="back" onclick="topFunction()">
-  BACK TO TOP
-</div>
 
-<script>
-let backToTop = document.getElementById('back')
-
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-</script>
-
+<%- include('./partials/backButton') %> 
 
 <%- include('./partials/footer') %> 
     

@@ -15,19 +15,18 @@ res.render('heroes', {title: "HEROES - VOUGHT INTERNATIONAL", heroes: heroes})
 //http://localhost:3000/heroes/:id/profesion
 
 show: function (req,res){
-   
-    let resultado = heroe.find(function(heroe){
-        return heroe.id == req.params.id 
+ 
+    let resultado = heroes.find(function(heroes){
+        return heroes.id == req.params.id 
               
     })
 
     if (resultado){
-        return res.send('Mi nombre es ' + resultado.nombre + ' y soy ' + resultado.profesion )
+        return res.render('hero', { title: resultado.alias, resultado})
     }
 
     return res.send('No tenemos en nuestra base ningún héroe ni heroína con ese id')
 
-    
  
 },
 
