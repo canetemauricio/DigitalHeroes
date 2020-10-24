@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title  %> </title>
+    <link href="//db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember" rel="stylesheet" type="text/css"/>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+
+<header>
+  <div class="banner">
+    <img src="/images/heroes-banner.jpg" alt="" width="100%">
+  </div>
+
+
+<%- include('./partials/head') %> 
+<div class="cover"><img src="/images/VOU.jpg" alt=""></div>
+
+
+<section class="section">
+  <h1>HEROES DATABASE</h1>  
+<div class="d-flex f-row f-wrap j-arround">
+    <% heroes.forEach(function(heroes) { %>
+      <article class="hero w-30">
+        <a href="/heroes/<%=heroes.id %>">
+        <div class="hero-img">
+          <img src="/images/starlight.png" alt="" width="100%">
+        </div>
+        <div class="hero-name">
+          <h1><%= heroes.alias %></h1>
+        </a>
+      </article>
+
+    <% })  %> 
+  </div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="back-top" id="back" onclick="topFunction()">
+    BACK TO TOP
+  </div>
+  
+  <script>
+  let backToTop = document.getElementById('back')
+  
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
+  
+  
+  <%- include('./partials/footer') %> 
+      
+    </body>
+  </html>

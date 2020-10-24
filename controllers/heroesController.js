@@ -1,5 +1,5 @@
 const { RequestHeaderFieldsTooLarge } = require('http-errors')
-let heroe = require('../data/heroes.json')
+let heroes = require('../data/heroes.json')
 
 module.exports = {
 
@@ -7,7 +7,7 @@ module.exports = {
 
 
 list: function(req,res){
-res.send(heroe)
+res.render('heroes', {title: "HEROES - VOUGHT INTERNATIONAL", heroes: heroes})
 } ,
 
 
