@@ -5,7 +5,7 @@ var router = express.Router();
 
 router.get('/', heroesController.list)
 
-router.get('/:id/profesion', heroesController.show)
+router.get('/:id/', heroesController.show)
 
 router.get('/:id/resenia/:tipo?', heroesController.review)
 
