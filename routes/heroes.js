@@ -4,9 +4,8 @@ var router = express.Router();
 
 
 router.get('/', heroesController.list)
-
-router.get('/:id/', heroesController.show)
-
+router.get('/search', heroesController.search)
+router.get('/:id', heroesController.show)
 router.get('/:id/resenia/:tipo?', heroesController.review)
 
 

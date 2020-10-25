@@ -1,6 +1,7 @@
 html{
   scroll-behavior: smooth;
 }
+
 body {
   margin:0;
   padding:0;
@@ -55,12 +56,18 @@ body {
 .w-100{width: 100%;}
 .d-flex{display: flex;}
 .f-row{flex-direction: row;}
+.f-between{justify-content: space-between;}
 .j-arround{justify-content:center; align-items: center;}
 a {text-decoration: none;  color: black;}
 .title{text-align: center;}
 .w-33{width: 33%;}
 .w-30{width: 30%}
+.w-45{width: 45%;}
 .f-wrap{flex-wrap: wrap ;}
+.center{text-align: center;}
+h1{text-align: center;}
+.blue{background-color: #1d88f0; color:white; border: 2px solid black; padding-left: 1%;  padding-top: 1%; padding-bottom: 1%;}
+.fas{padding-right: 1%;}
 
 .cover{
   width: 100%;
@@ -86,6 +93,12 @@ section{
 .section-img img{
   width: 100%;
 }
+
+.search{
+text-align: right;
+margin-bottom: 1%;
+}
+
 
 .section-cite {
 margin: auto 0;
@@ -157,4 +170,21 @@ footer a{
   list-style: none;
   padding-left: 0;
   
+}
+
+.file{
+  background-color: black;
+  color: white;
+  height: 75vh;
+  padding: 1%;
+}
+
+.file img{
+  margin: 0 auto;
+  width: 100%;
+  border: 2px solid white;
+}
+
+.hero-detail{
+  padding-left: 5%;
 }

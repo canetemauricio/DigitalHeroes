@@ -2,6 +2,7 @@
 <html>
   <head>
     <title><%= title  %> </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link href="//db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember" rel="stylesheet" type="text/css"/>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
@@ -17,13 +18,28 @@
 
 
 
-<section class="section">
-  <h1>HEROES DATABASE</h1>  
+<section>
+  <h1>HERO DETAIL</h1>  
+  <hr>
+  <div class="blue"><i class="fas fa-laptop-code"></i>VOUGHT INTERNATIONAL - CLASSIFIED GLOBAL HEROES DATABASE</div>
+ <div class="d-flex file">
+  <div class="w-30 file-img">
+    <img src= <%= '/images/' + resultado.alias +'.png' %>   alt="" width="100%">
+  </div>
+    
+    <div class="w-45 hero-detail"> 
+      
+      <h1 class="center "><%= resultado.alias.toUpperCase().replace('-', " ") %></h1>
 
-  <%= resultado.alias %> <br>
-  <%= resultado.name  %> <br>
-  <%= resultado.review  %> <br> 
- </section>
+      <h3>Real Name:</h2> <p><%= resultado.name %></p>            
+      <h3>Powers:</h3> <p><%= resultado.powers  %></p>        
+      <h3>Review:</h3><p>      <%= resultado.review %></p>      
+    
+    </div>
+
+
+
+</section>
 
 
 

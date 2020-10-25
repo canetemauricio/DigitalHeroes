@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title  %> </title>
+    <link href="//db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember" rel="stylesheet" type="text/css"/>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+<header>
+  <div class="banner">
+    <img src="/images/heroes-banner.jpg" alt="" width="100%">
+  </div>
+
+<%- include('./partials/head') %> 
+<div class="cover"><img src="/images/VOU.jpg" alt=""></div>
+
+
+<section class="section">
+
+
+<h1>SEARCH RESULTS</h1>
+
+<hr>
+
+<div class="search">
+  <form action="/heroes/search" method="GET">
+    <input type="text" name="alias" id="search">
+    <input type="submit">
+  </form>
+</div>
+
+<div class="d-flex f-row f-wrap j-arround">
+
+    <% results.forEach(function(results) { %>
+
+      <article class="hero w-30">
+        <a href="/heroes/<%=results.id %>">
+        <div class="hero-img">
+          <img src= <%= '/images/' + results.alias +'.png' %>   alt="" width="100%">
+        </div>
+        <div class="hero-name">
+          <h1><%=  results.alias.toUpperCase().replace('-', " ") %></h1>
+        </a>
+      </article>
+
+    <% })  %> 
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<%- include('./partials/backButton') %> 
+  
+  <%- include('./partials/footer') %> 
+      
+    </body>
+  </html> 

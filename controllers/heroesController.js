@@ -11,8 +11,7 @@ res.render('heroes', {title: "HEROES - VOUGHT INTERNATIONAL", heroes: heroes})
 } ,
 
 
-
-//http://localhost:3000/heroes/:id/profesion
+//http://localhost:3000/heroes/:id
 
 show: function (req,res){
  
@@ -24,10 +23,28 @@ show: function (req,res){
     if (resultado){
         return res.render('hero', { title: resultado.alias, resultado})
     }
-
-    return res.send('No tenemos en nuestra base ningún héroe ni heroína con ese id')
+    /* return res.send('404') */
 
  
+},
+
+search: function(req,res){
+
+    let userSearch = req.query.alias
+    const searchParams = userSearch.charAt(0).toUpperCase() + userSearch.slice(1)
+    let results =[]
+
+    for(i=0; i< heroes.length; i++){
+        if(heroes[i].alias.includes(userSearch) || heroes[i].alias.includes(searchParams) ){
+
+            results.push(heroes[i])
+
+        }
+        
+    }
+
+res.render('heroSearch', {title: "SEARCH RESULTS - VOUGHT INTERNATIONAL", results,})
+
 },
 
 
