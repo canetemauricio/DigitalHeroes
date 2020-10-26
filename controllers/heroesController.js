@@ -1,3 +1,4 @@
+const fs = require('fs')
 const { RequestHeaderFieldsTooLarge } = require('http-errors')
 let heroes = require('../data/heroes.json')
 
@@ -40,16 +41,33 @@ module.exports = {
         res.render('create')
     },
     save: function(req,res){
-        let usuario = {
-            alias: req.body.alias,
-            name: req.body.name,
-            powers: req.body.powers,
-            review: req.body.review
+        
+        heroesFile = fs.readFileSync('./data/heroes.json', {encoding: 'utf-8'})
+        
+        if (heroesFile == ""){
+            heroesList =[]
+        }  else{
+            heroesList = JSON.parse(heroesFile)   
         }
+        heroesList.push(
+            {
+                    id: heroesList[heroesList.length-1].id+1,
+                    alias: req.body.alias,
+                    name: req.body.name,
+                    powers: req.body.powers,
+                    review: req.body.review
+                
+            }
+        )
+
+        let heroesJSON = JSON.stringify(heroesList)
+        fs.writeFileSync('./data/heroes.json', heroesJSON)
 
         res.redirect('/heroes')
-    },
 
+        
+
+    },
     edit: function(req,res){
 
         let heroId = req.params.id
@@ -66,9 +84,16 @@ module.exports = {
         }
         res.send(heroEdited)
     },
-
     delete: function (req,res){
-        res.send('HEROE ELIMIADO. F POR EL HEROE')
+        
+        let resultado = heroes.find(function(heroes){
+            return heroes.id == req.params.id            
+        })
+        fs.writeFileSync('probando.txt', resultado)
+         let deleted  = heroes.slice(heroes.indexOf(resultado))
+        
+
+        res.send(deleted)
     }
 
 
