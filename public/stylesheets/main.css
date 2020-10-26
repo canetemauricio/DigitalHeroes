@@ -1,0 +1,64 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin:0;
+    padding:0;
+    font-family: "Amazon Ember";
+    background-color:lightgray;
+  }
+  
+  a {text-decoration: none;  color: black;}
+  
+  .banner {
+    background-color: white;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .cover{
+    width: 100%; 
+  }
+  
+  .cover img{
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .w-100{width: 100%;}
+  .w-60{width: 60%;}
+  .w-50{width: 50%;}
+  .w-45{width: 45%;}
+  .w-40{width: 40%;}
+  .w-33{width: 33%;}
+  .w-30{width: 30%}
+
+  h1 {text-align: center;}
+  .d-flex{display: flex;}
+  .f-wrap{flex-wrap: wrap ;}
+  .f-row{flex-direction: row;}
+  .f-between{justify-content: space-between;}
+  .j-arround{justify-content:center;}
+  .a-center{align-items: center;}
+  .c-3d3d3d{color: #3d3d3d}
+  .lightgray{background-color: lightgray;}
+  .p-05{padding: 0.2%;}
+  .p-1{padding: 1%;}
+  .p-2{padding: 2%;}
+  
+
+  .transform{
+    transition: 600ms;
+  }
+  .transform:hover{
+    transform: scale(1.1);
+    transition: 600ms;
+  }
+  

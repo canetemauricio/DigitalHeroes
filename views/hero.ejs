@@ -1,54 +1,51 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title  %> </title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link href="//db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember" rel="stylesheet" type="text/css"/>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-
-
-<header>
-  <div class="banner">
-    <img src="/images/heroes-banner.jpg" alt="" width="100%">
-  </div>
-
 <%- include('./partials/head') %> 
 
+<section class="w-100">
 
-
-<section>
-  <h1>HERO DETAIL</h1>  
-  <hr>
-  <div class="blue"><i class="fas fa-laptop-code"></i>VOUGHT INTERNATIONAL - CLASSIFIED GLOBAL HEROES DATABASE</div>
- <div class="d-flex file">
-  <div class="w-30 file-img">
-    <img src= <%= '/images/' + resultado.alias +'.png' %>   alt="" width="100%">
-  </div>
-    
-    <div class="w-45 hero-detail"> 
+  <div class="w-100">
+    <div class="d-flex f-row">
+      <div class="w-33 detail-img">
+        <img src= <%= '/images/' + resultado.alias +'.png' %>   alt="" width="100%">
+      </div>
       
-      <h1 class="center "><%= resultado.alias.toUpperCase().replace('-', " ") %></h1>
+      <div class="w-50 hero-detail">
+        <h1 class="center "><%= resultado.alias.toUpperCase().replace('-', " ") %></h1>
+        <hr>
+        <p><h4>REAL NAME</h4><%= resultado.name.toUpperCase() %></p>
+        <p><h4>POWERS</h4>
+        <ul>
+        <%  for(let i =0 ;i< powersArray.length;i ++){ %>
+        <li><%=powersArray[i].charAt(0).toUpperCase() + powersArray[i].slice(1).toLowerCase()%> </li>
 
-      <h3>Real Name:</h2> <p><%= resultado.name %></p>            
-      <h3>Powers:</h3> <p><%= resultado.powers  %></p>        
-      <h3>Review:</h3><p>      <%= resultado.review %></p>      
-    
+        <% } %></p>  
+        </ul>
+        
+
+
+
+
+        <p><h4>REVIEW</h4><%= resultado.review %></p> 
+      
+
+
+        <form action="/heroes/<%= resultado.id %>/delete?_method=DELETE" method="post">
+        <button>DELETE HERO</button>
+        </form>
+      </div>
+  
+      
     </div>
+    
+   
+  
+
+    </div>
+
+  </div>
 
 
 
 </section>
-
-
-
-
-
-
-
-
-
 
 
 <%- include('./partials/backButton') %> 

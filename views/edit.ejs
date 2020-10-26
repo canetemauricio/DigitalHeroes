@@ -1,0 +1,29 @@
+<%- include('./partials/head') %> 
+    <body>
+          
+<section>
+
+    <form action="/heroes/<%=editing.id%>/refresh?_method=PUT" method="POST">
+
+        <label for="alias">Alias</label>
+        <input type="text" name="alias" value="<%= editing.alias %>"> 
+        <br>
+        <label for="RealName">Real Name</label>
+         <input type="text" name="name" value="<%= editing.name %>">
+         <br>
+        <label for="Powers">Powers</label>
+        <input type="text" name="powers" value="<%= editing.powers %>">
+        <br>
+        <label for="Review">Review</label>
+        <input type="textarea" name="review" value="<%= editing.review %>"">
+        
+        <input type="submit">
+
+</form>
+
+</section>
+
+<%- include('./partials/backButton') %> 
+  <%- include('./partials/footer') %> 
+    </body>
+  </html>

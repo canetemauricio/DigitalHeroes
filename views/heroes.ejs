@@ -1,72 +1,27 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title  %> </title>
-    <link href="//db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember" rel="stylesheet" type="text/css"/>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-
-
-<header>
-  <div class="banner">
-    <img src="/images/heroes-banner.jpg" alt="" width="100%">
-  </div>
-
-
 <%- include('./partials/head') %> 
+
 <div class="cover"><img src="/images/VOU.jpg" alt=""></div>
+  <section class="section p-2">
 
+    <h1 class="p-1">HEROES DATABASE</h1>
+    <hr>
 
-<section class="section">
+    <%- include('./partials/search') %> 
 
-  
+    <div class="d-flex f-row f-wrap j-arround">
 
-  
+      <%- include('./partials/heroArticles') %> 
+    </div>
 
-<h1>HEROES DATABASE</h1>
+    <div class="p-2">
+      <a href="/heroes/create">  <h1 class="c-3d3d3d transform">NEW SUPE IN THE NEIGHBORHOOD? ADD HIM HERE</h1></a>
+    </div>
 
-<hr>
-
-<div class="search">
-  <form action="/heroes/search" method="GET">
-    <input type="text" name="alias" id="search">
-    <input type="submit">
-  </form>
+  </section>
 </div>
 
-<div class="d-flex f-row f-wrap j-arround">
-
-    <% heroes.forEach(function(heroes) { %>
-
-      <article class="hero w-30">
-        <a href="/heroes/<%=heroes.id %>">
-        <div class="hero-img">
-          <img src= <%= '/images/' + heroes.alias +'.png' %>   alt="" width="100%">
-        </div>
-        <div class="hero-name">
-          <h1><%=  heroes.alias.toUpperCase().replace('-', " ") %></h1>
-        </a>
-      </article>
-
-    <% })  %> 
-  </div>
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-<%- include('./partials/backButton') %> 
-  
+  <%- include('./partials/backButton')%> 
   <%- include('./partials/footer') %> 
-      
-    </body>
-  </html>
+
+</body>
+</html>

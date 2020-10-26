@@ -3,7 +3,7 @@
 		"id": 1,
 		"alias": "Homelander",
 		"name": "John",
-		"powers": "Superhuman strength, speed, agility, X-Ray vision, heat vision, flight.",
+		"powers": "Superhuman strength, Superhuman speed, Superhuman agility, X-Ray vision, heat vision, flight.",
 		"review": "Homelander was raised in a lab, surrounded by doctors like Jonah Vogelbaum, who called him John. For not having a mother figure, Vogelbaum remarked that Homelander turned violent, aggressive, and downright hateful."
 	}, {
 		"id": 2,
@@ -28,26 +28,26 @@
 		"id": 5,
 		"alias": "Queen-Meave",
 		"name": "Margaret",
-		"powers": "Superhuman strength, speed, ability, durability, and jump",
+		"powers": "Superhuman strength, Superhuman speed, Superhuman ability, Superhuman durability, Superhuman jump",
 		"review": "As a warrior, a feminist, a humanitarian, and second most powerful member of The Seven, Queen Maeve is the ultimate role model for little girls all over the world. But to reach such astonishing heights, she’s had to make sacrifices along the way. Embracing the image that Vought demanded she accept meant abandoning the truths – and even some of the people – she held dear."
 	}, {
 		"id": 6 ,
 		"alias": "Black-Noir",
 		"name": "Unknown",
-		"powers": "Superhuman strength, agility, extreme stealth.",
+		"powers": "Superhuman strength, Superhuman agility, extreme stealth.",
 		"review": "Silent, stealthy, and enigmatic, Black Noir is The Seven’s superpowered ninja. His super strength and heightened senses are matched only by his proficiency in the martial arts. Criminals run in terror at the mere mention of his name. Little is known about this lethal warrior, other than having trained with a master sensei to become the death dealer he is at present. Whatever lies behind Black Noir’s mask is a complete mystery – which only makes him more terrifying."
 	}, {
 		"id":7,
 		"alias": "The-Deep",
 		"name": "Kevin",
 		"powers": "Superhuman strength, ability to breath underwater (via gills), telepathy (only with aquatic animals), can swim really fast",
-		"review": "Deep"
+		"review": "The Deep can breathe underwater and communicate with sea creatures. His attractive features have made him Vought’s social media propaganda. Unfortunately, that’s pretty much all the company wants from him — because he’s The Seven’s token aquatic Superhero. But he knows he could be doing so much more than flashing his biceps on Instagram if only they’d let him... even though he’s secretly proud that his profile gets 4 million hits a day."
 	}, {
 		"id": 8,
 		"alias": "Translucent",
-		"name": "Kevin",
-		"powers": "Superhuman strength, ability to breath underwater, telepathy (only with aquatic animals), can swim really fast.",
-		"review": "The Deep can breathe underwater and communicate with sea creatures. His attractive features have made him Vought’s social media propaganda. Unfortunately, that’s pretty much all the company wants from him — because he’s The Seven’s token aquatic Superhero. But he knows he could be doing so much more than flashing his biceps on Instagram if only they’d let him... even though he’s secretly proud that his profile gets 4 million hits a day."
+		"name": "Unknown",
+		"powers": "Superhuman strength, carbon skin, invisibility",
+		"review": "Translucent is The Seven’s invisible superhero, thanks to his carbon metamaterial skin that bends light and makes him bulletproof. A master of stealth, he can sneak anywhere and give bad guys the surprise of a lifetime. But when he’s not fighting crime and saving the day, Translucent has... other interests. From women’s changing rooms to sorority house showers, Translucent loves using his invisibility to lurk where he shouldn’t."
 	}, {
 		"id":9 ,
 		"alias": "The-Lamplighter",

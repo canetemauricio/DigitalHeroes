@@ -1,0 +1,39 @@
+header ul li{
+    font-size: 18px;
+    text-align: center;
+    list-style: none;
+    display: inline;
+  }
+  
+  .navbar{
+    justify-content: space-between;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    padding-left: 1%;
+    background-color: white;
+  }
+  
+  
+  .navbar-logo{
+    width: 6%;
+    padding-left: 1%;
+  }
+  .navbar-logo img{
+    width: 100%;
+  }
+  .navbar-menu{
+    width: 93%; 
+    margin: auto 0;
+  }
+  
+  .navbar-menu li{
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  
+  .navbar-menu li:hover{
+    border-bottom: 2px solid #373e3e;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 100ms;
+  }

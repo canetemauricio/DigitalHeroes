@@ -1,0 +1,31 @@
+footer{
+    color: #3d3d3d;
+    text-align: center;  
+  }
+  
+  
+  footer a{
+    color: #3d3d3d;
+  }
+  .footer-links ul{
+    list-style: none;
+  }
+  
+
+  
+.back-top{
+  margin-top: 1%;
+  margin-bottom: 1%;
+  background-color: #eaeaea;
+  width: 100%;
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  font-weight: 600;
+}
+
+.back-top:hover{
+  cursor: pointer;
+  background-color: lightgrey;
+}
+
