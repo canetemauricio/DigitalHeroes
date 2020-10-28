@@ -20,20 +20,13 @@ module.exports = {
     },
     search: function(req,res){
 
-        let userSearch = req.query.alias
-        let upperFirst = userSearch.charAt(0).toUpperCase() + userSearch.slice(1).toLowerCase()
-        let lowerSecond = userSearch.toLowerCase()
-        let results =[]
-
-        for(i=0; i< heroes.length; i++){
-            if(heroes[i].alias.includes(userSearch) || heroes[i].alias.includes(upperFirst) || heroes[i].alias.includes(lowerSecond) ){
-
-                results.push(heroes[i])
-
-            }
+        let userSearch = req.query.alias.toLowerCase()
+        //let upperFirst = userSearch.charAt(0).toUpperCase() + userSearch.slice(1).toLowerCase()
+        //let lowerSecond = userSearch.toLowerCase()
+        let results = heroes.filter(function(hero){
+            return hero.alias.toLowerCase().includes(userSearch)
+        })
         
-        }
-
         res.render('heroSearch', {title: "SEARCH RESULTS - VOUGHT INTERNATIONAL", results,})
 
     },
@@ -85,15 +78,23 @@ module.exports = {
         res.send(heroEdited)
     },
     delete: function (req,res){
-        
-        let resultado = heroes.find(function(heroes){
-            return heroes.id == req.params.id            
-        })
-        fs.writeFileSync('probando.txt', resultado)
-         let deleted  = heroes.slice(heroes.indexOf(resultado))
-        
 
-        res.send(deleted)
+        heroesFile = fs.readFileSync('./data/heroes.json', {encoding: 'utf-8'})
+
+        if (heroesFile == ""){
+            heroesList =[]
+        }  else{
+            heroesList = JSON.parse(heroesFile)   
+        }
+
+        let notdeleted = heroes.filter(function(hero){
+            return hero.id != req.params.id
+        })
+
+        let toWrite = JSON.stringify(notdeleted)
+        fs.writeFileSync('./data/heroes.json',toWrite)
+     
+        res.redirect('/heroes')
     }
 
 
